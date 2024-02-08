@@ -33,19 +33,52 @@
         <div class="container is-flex-direction-column">
         <div class="section px-auto has-text-justified">Please set your location and choose a lists of interests below. We will produce events in your area based on what is chosen, or online if you are interested in that.</div>
           <div class="section px-auto">
-            <h2 class="subtitle">Location</h2>
-            general location here
+            <div class="field">
+              <h2 class="subtitle">Location</h2>
+              <label class="label ml-5">City</label>
+              <div class="control ml-6">
+                <input class="input" type="text" placeholder="e.g Denver, CO">
+              </div>
+            </div>
+            
+            <div class="field">
+              <label class="label ml-5">Radius</label>
+              <div class="control is-expanded ml-6">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>5 miles</option>
+                    <option>10 miles</option>
+                    <option>15 miles</option>
+                    <option>20 miles</option>
+                    <option>20+ miles</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="section px-auto">
-            <h2 class="subtitle">Event Budget</h2>
-            budget range here
+          <div class="section px-auto pt-0">
+            <div class="field">
+              <label class="label"><h2 class="subtitle">Event Budget</h2></label>
+              <div class="control is-expanded ml-2">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>$15 - $25</option>
+                    <option>$25 - $30</option>
+                    <option>$35 - $45 </option>
+                    <option>$50+</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="section px-auto">
+          <div class="section px-auto pt-0">
             <h2 class="subtitle">Interests</h2>
-            modal for main and sub categories
+              modal for main and sub categories
           </div>
-          <div class="control">
-            <button class="button is-primary">Submit</button>
+          <div class="field is-grouped is-grouped-centered pt-0 pb-4">
+            <div class="control">
+              <button class="button is-primary">Submit</button>
+            </div>
           </div>
         </div>
     </div>
