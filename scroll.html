@@ -25,7 +25,7 @@
       <div class="column is-one-quarter">
         <h2 id="location-choice">Location</h2>
         <p id="user-location"></p>
-        <h2 id="category-choice">Genre</h2>
+        <h2 id="category-choice" class="js-modal-trigger" data-target="genre-modal">Genre</h2>
         <p id="user-categories"></p>
         <h2 id="budget-choice">Budget</h2>
         <p id="user-budget"></p>
@@ -40,11 +40,11 @@
       </div>
       <div>
         <div id="genre-modal" class="modal">
-          <div class="modal-background"></div>
+          <div id="out" class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
               <p class="modal-card-title">Genres</p>
-              <button class="delete" aria-label="close"></button>
+              <button id="exit" class="delete" aria-label="close"></button>
             </header>
             <section class="modal-card-body">
               <button id="arts" class="button m-1 is-primary">All Arts & Theatre</button>
@@ -52,7 +52,7 @@
               <button id="childrens" class="button m-1 is-primary">Children's Theatre</button>
               <button id="circus" class="button m-1 is-primary">Circus & Specialty Acts</button>
               <button id="classical" class="button m-1 is-primary">Classical</button>
-              <button id="comdey" class="button m-1 is-primary">Comedy</button>
+              <button id="comedy" class="button m-1 is-primary">Comedy</button>
               <button id="cultural" class="button m-1 is-primary">Cultural</button>
               <button id="dance" class="button m-1 is-primary">Dance</button>
               <button id="espectaculo" class="button m-1 is-primary">Espectaculo</button>
@@ -70,8 +70,8 @@
               <button id="variety" class="button m-1 is-primary">Variety</button>
             </section>
             <footer class="modal-card-foot">
-              <button class="button is-primary">Save changes</button>
-              <button class="button">Cancel</button>
+              <button id="save" class="button is-primary">Save changes</button>
+              <button id="cancel" class="button">Cancel</button>
             </footer>
           </div>
         </div>
