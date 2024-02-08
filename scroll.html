@@ -12,11 +12,11 @@
 <body>
   <nav class="navbar" role="navigation" aria-label="main-navigation">
     <div class="navbar-menu">
-        <a class="cat-1">Intrest 1</a>
-        <a class="cat-2">Intrest 2</a>
-        <a class="cat-3">Intrest 3</a>
-        <a class="cat-4">Intrest 4</a>
-        <a class="cat-5">Intrest 5</a>
+      <a class="cat-1">Intrest 1</a>
+      <a class="cat-2">Intrest 2</a>
+      <a class="cat-3">Intrest 3</a>
+      <a class="cat-4">Intrest 4</a>
+      <a class="cat-5">Intrest 5</a>
     </div>
   </nav>
   <div class="column">
@@ -38,43 +38,65 @@
           Second column
         </div>
       </div>
-    <div>
-      <div id="genre-modal" class="modal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">Genres</p>
-            <button class="delete" aria-label="close"></button>
-          </header>
-          <section class="modal-card-body">
-            <button class="button m-1 is-primary">All Arts & Theatre</button>
-            <button class="button m-1 is-primary">Broadway</button>
-            <button class="button m-1 is-primary">Children's Theatre</button>
-            <button class="button m-1 is-primary">Circus & Specialty Acts</button>
-            <button class="button m-1 is-primary">Classical</button>
-            <button class="button m-1 is-primary">Comedy</button>
-            <button class="button m-1 is-primary">Cultural</button>
-            <button class="button m-1 is-primary">Dance</button>
-            <button class="button m-1 is-primary">Espectaculo</button>
-            <button class="button m-1 is-primary">Fashion</button>
-            <button class="button m-1 is-primary">Fine Art</button>
-            <button class="button m-1 is-primary">Magic & Illusion</button>
-            <button class="button m-1 is-primary">Miscellaneous</button>
-            <button class="button m-1 is-primary">Multimedia</button>
-            <button class="button m-1 is-primary">Music</button>
-            <button class="button m-1 is-primary">Opera</button>
-            <button class="button m-1 is-primary">Performance Art</button>
-            <button class="button m-1 is-primary">Puppetry</button>
-            <button class="button m-1 is-primary">Spectacular</button>
-            <button class="button m-1 is-primary">Theatre</button>
-            <button class="button m-1 is-primary">Variety</button>
-          </section>
-          <footer class="modal-card-foot">
-            <button class="button is-primary">Save changes</button>
-            <button class="button">Cancel</button>
-          </footer>
+      <div>
+        <div id="genre-modal" class="modal">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Genres</p>
+              <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <button class="button m-1 is-primary">All Arts & Theatre</button>
+              <button id="all" class="button m-1 is-primary">Arts</button>
+              <button class="button m-1 is-primary">Broadway</button>
+              <button id="all" class="button m-1 is-primary">Broadway</button>
+              <button class="button m-1 is-primary">Children's Theatre</button>
+              <button id="all" class="button m-1 is-primary">Children</button>
+              <button class="button m-1 is-primary">Circus & Specialty Acts</button>
+              <button id="all" class="button m-1 is-primary">Circus</button>
+              <button class="button m-1 is-primary">Classical</button>
+              <button id="all" class="button m-1 is-primary">Classical</button>
+              <button class="button m-1 is-primary">Comedy</button>
+              <button id="all" class="button m-1 is-primary">Comedy</button>
+              <button class="button m-1 is-primary">Cultural</button>
+              <button id="all" class="button m-1 is-primary">Cultural</button>
+              <button class="button m-1 is-primary">Dance</button>
+              <button id="all" class="button m-1 is-primary">Dance</button>
+              <button class="button m-1 is-primary">Espectaculo</button>
+              <button id="all" class="button m-1 is-primary">Espectaculo</button>
+              <button class="button m-1 is-primary">Fashion</button>
+              <button id="all" class="button m-1 is-primary">Fashion</button>
+              <button class="button m-1 is-primary">Fine Art</button>
+              <button id="all" class="button m-1 is-primary">Fine</button>
+              <button class="button m-1 is-primary">Magic & Illusion</button>
+              <button id="all" class="button m-1 is-primary">Magic</button>
+              <button class="button m-1 is-primary">Miscellaneous</button>
+              <button id="all" class="button m-1 is-primary">Miscellaneous</button>
+              <button class="button m-1 is-primary">Multimedia</button>
+              <button id="all" class="button m-1 is-primary">Multimedia</button>
+              <button class="button m-1 is-primary">Music</button>
+              <button id="all" class="button m-1 is-primary">Music</button>
+              <button class="button m-1 is-primary">Opera</button>
+              <button id="all" class="button m-1 is-primary">Opera</button>
+              <button class="button m-1 is-primary">Performance Art</button>
+              <button id="all" class="button m-1 is-primary">Performance</button>
+              <button class="button m-1 is-primary">Puppetry</button>
+              <button id="all" class="button m-1 is-primary">Puppetry</button>
+              <button class="button m-1 is-primary">Spectacular</button>
+              <button id="all" class="button m-1 is-primary">Spectacular</button>
+              <button class="button m-1 is-primary">Theatre</button>
+              <button id="all" class="button m-1 is-primary">Theatre</button>
+              <button class="button m-1 is-primary">Variety</button>
+              <button id="all" class="button m-1 is-primary">Variety</button>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-primary">Save changes</button>
+              <button class="button">Cancel</button>
+            </footer>
+          </div>
         </div>
-      </div>
-  <script src="./assets/js/scroll.js"></script>
+        <script src="./assets/js/scroll.js"></script>
 </body>
+
 </html>
