@@ -1,21 +1,14 @@
 // global variables
 var TMapiBaseUrl = "https://app.ticketmaster.com/discovery/v2/";
 var TMapiKey = "apikey=1NDtAAlaAaurhUi3CEDkXhVsZBc8vfgV";
-// var interest = "Theater";
-// var radius = "50";
 var SubmitBtn = document.querySelector("#submit");
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
     var radius = document.querySelector("#radius");
-    var interest = document.querySelector("#user-chosen");
+    var interest = document.querySelector("#user-categories");
 
-
-console.log(radius.val());
-console.log(interest.text());
-console.log(location.name);
-
-    var api = TMapiBaseUrl + "events.json?keyword=" + interest + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius + "&" + TMapiKey;
+    var api = TMapiBaseUrl + "events.json?keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&" + TMapiKey;
     
     fetch(api)
     .then(function(respon) {
@@ -23,10 +16,11 @@ console.log(location.name);
     })
     .then(function(respon) {
         if (respon.page.totalElements == 0) {
-            alert("No information");
+// create modal for no events
+            alert("No Events found.");
         }
         else {
-            alert("I have events");
+            window.location.replace("./scroll.html");
 
         }
     })
@@ -48,8 +42,8 @@ function getLocationGeo() {
     var city = document.querySelector("#city");
     var url1 = "https://api.openweathermap.org/geo/1.0/direct?q="; 
     var url2 = "&limit=5&appid=cedfc15c5d9805b46699f39b13fc40c7";
-    // var city = "Denver";
-    var apiurl = url1 + city + url2;
+
+    var apiurl = url1 + city.value + url2;
 
 
     fetch(apiurl)
@@ -58,6 +52,7 @@ function getLocationGeo() {
         })
         .then(function (data) {
             if (!data[0]) {
+// create modal for no city                
                 alert('No Location not found City you entered!');
             }
             else {
@@ -67,4 +62,6 @@ function getLocationGeo() {
         })
 }
 
-SubmitBtn.addEventListener("click", getLocationGeo());
+if (window.location.href.includes("index.html")) {
+    SubmitBtn.addEventListener("click", getLocationGeo);
+}
