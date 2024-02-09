@@ -58,11 +58,64 @@
           </div>
           <div class="section px-auto pt-0">
             <h2 class="subtitle">Interests</h2>
-              modal for main and sub categories
+            <div class="column">
+              <div class="columns">
+                <div class="column is-one-quarter">
+                  <h2 id="location-choice">Location</h2>
+                  <p id="user-location"></p>
+                  <h2 id="category-choice" class="js-modal-trigger" data-target="genre-modal">Genre</h2>
+                  <p id="user-categories"></p>
+                </div>
+                <div class="columns" id="result-content">
+                  <div class="column">
+                    First column
+                  </div>
+                  <div class="column">
+                    Second column
+                  </div>
+                </div>
+                <div>
+                  <div id="genre-modal" class="modal">
+                    <div id="out" class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">Genres</p>
+                        <button id="exit" class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <button id="arts" class="button m-1 is-primary">All Arts & Theatre</button>
+                        <button id="broadway" class="button m-1 is-primary">Broadway</button>
+                        <button id="childrens" class="button m-1 is-primary">Children's Theatre</button>
+                        <button id="circus" class="button m-1 is-primary">Circus & Specialty Acts</button>
+                        <button id="classical" class="button m-1 is-primary">Classical</button>
+                        <button id="comedy" class="button m-1 is-primary">Comedy</button>
+                        <button id="cultural" class="button m-1 is-primary">Cultural</button>
+                        <button id="dance" class="button m-1 is-primary">Dance</button>
+                        <button id="espectaculo" class="button m-1 is-primary">Espectaculo</button>
+                        <button id="fashion" class="button m-1 is-primary">Fashion</button>
+                        <button id="fine" class="button m-1 is-primary">Fine Art</button>
+                        <button id="magic" class="button m-1 is-primary">Magic & Illusion</button>
+                        <button id="miscellaneous" class="button m-1 is-primary">Miscellaneous</button>
+                        <button id="multimedia" class="button m-1 is-primary">Multimedia</button>
+                        <button id="music" class="button m-1 is-primary">Music</button>
+                        <button id="opera" class="button m-1 is-primary">Opera</button>
+                        <button id="performance" class="button m-1 is-primary">Performance Art</button>
+                        <button id="puppetry" class="button m-1 is-primary">Puppetry</button>
+                        <button id="spectacular" class="button m-1 is-primary">Spectacular</button>
+                        <button id="theatre" class="button m-1 is-primary">Theatre</button>
+                        <button id="variety" class="button m-1 is-primary">Variety</button>
+                      </section>
+                      <footer class="modal-card-foot">
+                        <button id="save" class="button is-primary">Save changes</button>
+                        <button id="cancel" class="button">Cancel</button>
+                      </footer>
+                    </div>
+                  </div>
+          </div>
           </div>
           <div class="field is-grouped is-grouped-centered pt-0 pb-4">
             <div class="control">
-              <button class="button is-primary">Submit</button>
+              <button id="submit" class="button is-primary">Submit</button>
             </div>
           </div>
         </div>
@@ -76,5 +129,6 @@
     </div>
     </footer>
         <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/scroll.js"></script>
 </body>
 </html>
