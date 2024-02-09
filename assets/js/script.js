@@ -1,19 +1,19 @@
 // global variables
 var TMapiBaseUrl = "https://app.ticketmaster.com/discovery/v2/";
 var TMapiKey = "apikey=1NDtAAlaAaurhUi3CEDkXhVsZBc8vfgV";
-var interest = "Theater";
-var radius = "50";
-var city = document.querySelector("#city");
-var radius = document.querySelector("#radius");
-var interest = document.querySelector("#user-chosen");
+// var interest = "Theater";
+// var radius = "50";
 var SubmitBtn = document.querySelector("#submit");
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
+    var radius = document.querySelector("#radius");
+    var interest = document.querySelector("#user-chosen");
 
-console.log(radius.value());
+
+console.log(radius.val());
 console.log(interest.text());
-console.log(city.text());
+console.log(location.name);
 
     var api = TMapiBaseUrl + "events.json?keyword=" + interest + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius + "&" + TMapiKey;
     
@@ -44,12 +44,14 @@ function addLocalStorage(search) {
 
 // Get GeoLocation for City from user supplied input
 // uses openweathermap GEO API to get Lat and Lon of Location
-function getLocationGeo(city) {
+function getLocationGeo() {
+    var city = document.querySelector("#city");
     var url1 = "https://api.openweathermap.org/geo/1.0/direct?q="; 
     var url2 = "&limit=5&appid=cedfc15c5d9805b46699f39b13fc40c7";
-    var city = "Denver";
+    // var city = "Denver";
     var apiurl = url1 + city + url2;
-    console.log(apiurl);
+
+
     fetch(apiurl)
         .then(function (respon) {
             return respon.json();
@@ -65,4 +67,4 @@ function getLocationGeo(city) {
         })
 }
 
-SubmitBtn.addEventListener("click", getLocationGeo(city));
+SubmitBtn.addEventListener("click", getLocationGeo());
