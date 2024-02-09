@@ -20,6 +20,7 @@ var spectacularValue = document.querySelector("#spectacular")
 var theatreValue = document.querySelector("#theatre")
 var varietyValue = document.querySelector("#variety")
 var userCategories = document.querySelector("#user-categories")
+var userChosen = document.querySelector("#user-chosen")
 var categoryChoice = document.querySelector("#category-choice")
 var theModal = document.querySelector("#genre-modal")
 var outModal = document.querySelector("#out")
@@ -27,6 +28,11 @@ var exitModal = document.querySelector("#exit")
 var saveModal = document.querySelector("#save")
 var cancelModal = document.querySelector("#cancel")
 var submitButton = document.querySelector("#submit")
+var homepageButton = document.querySelector("#home")
+
+homepageButton.addEventListener("click", function() {
+  window.location.replace("./index.html")
+})
 
 submitButton.addEventListener("click", function() {
   window.location.replace("./scroll.html")
@@ -54,252 +60,105 @@ cancelModal.addEventListener("click", function() {
 
 artsValue.addEventListener("click", function() {
   userCategories.textContent = "All Arts & Theatre"
-  if (!artsValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    artsValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (artsValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    artsValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "All Arts & Theatre"
 })
 
 broadwayValue.addEventListener("click", function() {
   userCategories.textContent = "Broadway"
-  if (!broadwayValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    broadwayValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (broadwayValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    broadwayValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Broadway"
 })
 
 childrensValue.addEventListener("click", function() {
   userCategories.textContent = "Children's Theatre"
-  if (!childrensValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    childrensValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (childrensValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    childrensValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Children's Theatre"
 })
 
 circusValue.addEventListener("click", function() {
   userCategories.textContent = "Circus & Specialty Acts"
-  if (!circusValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    circusValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (circusValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    circusValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Circus & Specialty Acts"
 })
 
 classicalValue.addEventListener("click", function() {
   userCategories.textContent = "Classical"
-  if (!classicalValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    classicalValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (classicalValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    classicalValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Classical"
 })
 
 comedyValue.addEventListener("click", function() {
   userCategories.textContent = "Comedy"
-  if (!comedyValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    comedyValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (comedyValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    comedyValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Comedy"
 })
 
 culturalValue.addEventListener("click", function() {
   userCategories.textContent = "Cultural"
-  if (!culturalValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    culturalValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (culturalValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    culturalValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Cultural"
 })
 
 danceValue.addEventListener("click", function() {
   userCategories.textContent = "Dance"
-  if (!danceValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    danceValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (danceValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    danceValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Dance"
 })
 
 espectaculoValue.addEventListener("click", function() {
   userCategories.textContent = "Espectaculo"
-  if (!espectaculoValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    espectaculoValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (espectaculoValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    espectaculoValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Espectaculo"
 })
 
 fashionValue.addEventListener("click", function() {
   userCategories.textContent = "Fashion"
-  if (!fashionValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    fashionValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (fashionValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    fashionValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Fashion"
 })
 
 fineValue.addEventListener("click", function() {
   userCategories.textContent = "Fine Art"
-  if (!fineValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    fineValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (fineValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    fineValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Fine Art"
 })
 
 magicValue.addEventListener("click", function() {
   userCategories.textContent = "Magic & Illusion"
-  if (!magicValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    magicValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (magicValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    magicValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Magic & Illusion"
 })
 
 miscellaneousValue.addEventListener("click", function() {
   userCategories.textContent = "Miscellaneous"
-  if (!miscellaneousValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    miscellaneousValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (miscellaneousValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    miscellaneousValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Miscellaneous"
 })
 
 multimediaValue.addEventListener("click", function() {
   userCategories.textContent = "Multimedia"
-  if (!multimediaValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    multimediaValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (multimediaValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    multimediaValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Multimedia"
 })
 
 musicValue.addEventListener("click", function() {
   userCategories.textContent = "Music"
-  if (!musicValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    musicValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (musicValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    musicValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Music"
 })
 
 operaValue.addEventListener("click", function() {
   userCategories.textContent = "Opera"
-  if (!operaValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    operaValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (operaValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    operaValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Opera"
 })
 
 performanceValue.addEventListener("click", function() {
   userCategories.textContent = "Performance Art"
-  if (!performanceValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    performanceValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (performanceValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    performanceValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Performance Art"
 })
 
 puppetryValue.addEventListener("click", function() {
   userCategories.textContent = "Puppetry"
-  if (!puppetryValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    puppetryValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (puppetryValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    puppetryValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Puppetry"
 })
 
 spectacularValue.addEventListener("click", function() {
   userCategories.textContent = "Spectacular"
-  if (!spectacularValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    spectacularValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (spectacularValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    spectacularValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Spectacular"
 })
 
 theatreValue.addEventListener("click", function() {
   userCategories.textContent = "Theatre"
-  if (!theatreValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    theatreValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (theatreValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    theatreValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Theatre"
 })
 
 varietyValue.addEventListener("click", function() {
   userCategories.textContent = "Variety"
-  if (!varietyValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    varietyValue.classList.add("has-background-primary-light", "has-text-primary")
-    return
-  }
-  if (varietyValue.classList.contains("has-background-primary-light", "has-text-primary")) {
-    varietyValue.classList.remove("has-background-primary-light", "has-text-primary")
-    return
-  }
+  userChosen.textContent = "Variety"
 })
