@@ -1,16 +1,19 @@
 // global variables
-var TMapiBaseUrl = "https://app.ticketmaster.com/discovery/v2/"
+var TMapiBaseUrl = "https://app.ticketmaster.com/discovery/v2/";
 var TMapiKey = "apikey=1NDtAAlaAaurhUi3CEDkXhVsZBc8vfgV";
 var interest = "Theater";
+var radius = "50";
 var city = document.querySelector("#city");
 var radius = document.querySelector("#radius");
-var interest = document.querySelector("#genre");
+var interest = document.querySelector("#user-chosen");
 var SubmitBtn = document.querySelector("#submit");
-
-
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
+
+console.log(radius.value());
+console.log(interest.text());
+console.log(city.text());
 
     var api = TMapiBaseUrl + "events.json?keyword=" + interest + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius + "&" + TMapiKey;
     
@@ -19,7 +22,7 @@ function getInterest(location) {
         return respon.json();
     })
     .then(function(respon) {
-        if (respon.page.number <= 0) {
+        if (respon.page.totalElements == 0) {
             alert("No information");
         }
         else {
@@ -62,4 +65,4 @@ function getLocationGeo(city) {
         })
 }
 
-getLocationGeo(city);
+SubmitBtn.addEventListener("click", getLocationGeo(city));
