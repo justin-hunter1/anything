@@ -26,6 +26,11 @@ var outModal = document.querySelector("#out")
 var exitModal = document.querySelector("#exit")
 var saveModal = document.querySelector("#save")
 var cancelModal = document.querySelector("#cancel")
+var submitButton = document.querySelector("#submit")
+
+submitButton.addEventListener("click", function() {
+  window.location.replace("./scroll.html")
+})
 
 categoryChoice.addEventListener("click", function() {
   theModal.classList.add("is-active")
@@ -48,7 +53,7 @@ cancelModal.addEventListener("click", function() {
 })
 
 artsValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "All Arts & Theatre "
+  userCategories.textContent = "All Arts & Theatre"
   if (!artsValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     artsValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -60,7 +65,7 @@ artsValue.addEventListener("click", function() {
 })
 
 broadwayValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Broadway "
+  userCategories.textContent = "Broadway"
   if (!broadwayValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     broadwayValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -72,7 +77,7 @@ broadwayValue.addEventListener("click", function() {
 })
 
 childrensValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Children's Theatre "
+  userCategories.textContent = "Children's Theatre"
   if (!childrensValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     childrensValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -84,7 +89,7 @@ childrensValue.addEventListener("click", function() {
 })
 
 circusValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Circus & Specialty Acts "
+  userCategories.textContent = "Circus & Specialty Acts"
   if (!circusValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     circusValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -96,7 +101,7 @@ circusValue.addEventListener("click", function() {
 })
 
 classicalValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Classical "
+  userCategories.textContent = "Classical"
   if (!classicalValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     classicalValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -108,7 +113,7 @@ classicalValue.addEventListener("click", function() {
 })
 
 comedyValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Comedy "
+  userCategories.textContent = "Comedy"
   if (!comedyValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     comedyValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -120,7 +125,7 @@ comedyValue.addEventListener("click", function() {
 })
 
 culturalValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Cultural "
+  userCategories.textContent = "Cultural"
   if (!culturalValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     culturalValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -132,7 +137,7 @@ culturalValue.addEventListener("click", function() {
 })
 
 danceValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Dance "
+  userCategories.textContent = "Dance"
   if (!danceValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     danceValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -144,7 +149,7 @@ danceValue.addEventListener("click", function() {
 })
 
 espectaculoValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Espectaculo "
+  userCategories.textContent = "Espectaculo"
   if (!espectaculoValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     espectaculoValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -156,7 +161,7 @@ espectaculoValue.addEventListener("click", function() {
 })
 
 fashionValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Fashion "
+  userCategories.textContent = "Fashion"
   if (!fashionValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     fashionValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -168,7 +173,7 @@ fashionValue.addEventListener("click", function() {
 })
 
 fineValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Fine Art "
+  userCategories.textContent = "Fine Art"
   if (!fineValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     fineValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -180,7 +185,7 @@ fineValue.addEventListener("click", function() {
 })
 
 magicValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Magic & Illusion "
+  userCategories.textContent = "Magic & Illusion"
   if (!magicValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     magicValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -192,7 +197,7 @@ magicValue.addEventListener("click", function() {
 })
 
 miscellaneousValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Miscellaneous "
+  userCategories.textContent = "Miscellaneous"
   if (!miscellaneousValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     miscellaneousValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -204,7 +209,7 @@ miscellaneousValue.addEventListener("click", function() {
 })
 
 multimediaValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Multimedia "
+  userCategories.textContent = "Multimedia"
   if (!multimediaValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     multimediaValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -216,7 +221,7 @@ multimediaValue.addEventListener("click", function() {
 })
 
 musicValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Music "
+  userCategories.textContent = "Music"
   if (!musicValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     musicValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -228,7 +233,7 @@ musicValue.addEventListener("click", function() {
 })
 
 operaValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Opera "
+  userCategories.textContent = "Opera"
   if (!operaValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     operaValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -240,7 +245,7 @@ operaValue.addEventListener("click", function() {
 })
 
 performanceValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Performance Art "
+  userCategories.textContent = "Performance Art"
   if (!performanceValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     performanceValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -252,7 +257,7 @@ performanceValue.addEventListener("click", function() {
 })
 
 puppetryValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Puppetry "
+  userCategories.textContent = "Puppetry"
   if (!puppetryValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     puppetryValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -264,7 +269,7 @@ puppetryValue.addEventListener("click", function() {
 })
 
 spectacularValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Spectacular "
+  userCategories.textContent = "Spectacular"
   if (!spectacularValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     spectacularValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -276,7 +281,7 @@ spectacularValue.addEventListener("click", function() {
 })
 
 theatreValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Theatre "
+  userCategories.textContent = "Theatre"
   if (!theatreValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     theatreValue.classList.add("has-background-primary-light", "has-text-primary")
     return
@@ -288,7 +293,7 @@ theatreValue.addEventListener("click", function() {
 })
 
 varietyValue.addEventListener("click", function() {
-  userCategories.textContent = userCategories.textContent + "Variety "
+  userCategories.textContent = "Variety"
   if (!varietyValue.classList.contains("has-background-primary-light", "has-text-primary")) {
     varietyValue.classList.add("has-background-primary-light", "has-text-primary")
     return

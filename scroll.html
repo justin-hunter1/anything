@@ -1,44 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events Choices</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-
-<body>
-  <nav class="navbar" role="navigation" aria-label="main-navigation">
-    <div class="navbar-menu">
-      <a class="cat-1">Intrest 1</a>
-      <a class="cat-2">Intrest 2</a>
-      <a class="cat-3">Intrest 3</a>
-      <a class="cat-4">Intrest 4</a>
-      <a class="cat-5">Intrest 5</a>
-    </div>
-  </nav>
-  <div class="column">
-    <h1 class="hero is-small is-primary title">Events for you</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Choices</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="main-navigation">
+      <div class="navbar-menu">
+        <a class="cat-1">Intrest 1</a>
+        <a class="cat-2">Intrest 2</a>
+        <a class="cat-3">Intrest 3</a>
+        <a class="cat-4">Intrest 4</a>
+        <a class="cat-5">Intrest 5</a>
+      </div>
+    </nav>
     <div class="columns">
-      <div class="column is-one-quarter">
-        <h2 id="location-choice">Location</h2>
-        <p id="user-location"></p>
-        <h2 id="category-choice" class="js-modal-trigger" data-target="genre-modal">Genre</h2>
-        <p id="user-categories"></p>
-      </div>
-      <div class="columns" id="result-content">
-        <div class="column">
-          First column
+      <h1 class="hero is-small is-primary title">Events for you</h1>
+      <div class="columns is-mobile">
+        <div class="column is-one-quarter">
+          <h2 id="location-choice">Location</h2>
+          <p id="user-location"></p>
+          <h2 id="category-choice" class="subtitle js-modal-trigger button is-primary pb-3" data-target="genre-modal">Change Genre</h2>
+          <p class="has-background-light-primary has-text-primary" id="user-categories"></p>
         </div>
-        <div class="column">
-          Second column
-        </div>
+        <div class="column" id="result-content">PlaceHolder</div>
       </div>
-      <div>
-        <div id="genre-modal" class="modal">
-          <div id="out" class="modal-background"></div>
+      <div id="genre-modal" class="modal">
+        <div id="out" class="modal-background"></div>
           <div class="modal-card">
             <header class="modal-card-head">
               <p class="modal-card-title">Genres</p>
@@ -71,9 +62,11 @@
               <button id="save" class="button is-primary">Save changes</button>
               <button id="cancel" class="button">Cancel</button>
             </footer>
-          </div>
+          </div>        
         </div>
-        <script src="./assets/js/scroll.js"></script>
-</body>
-
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scroll.js"></script>
+  </body>
 </html>
