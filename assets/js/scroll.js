@@ -29,6 +29,11 @@ var saveModal = document.querySelector("#save")
 var cancelModal = document.querySelector("#cancel")
 var submitButton = document.querySelector("#submit")
 var homepageButton = document.querySelector("#home")
+var scrollButton = document.querySelector("#scroll")
+
+scrollButton.addEventListener("click", function() {
+  window.location.replace("./scroll.html")
+})
 
 homepageButton.addEventListener("click", function() {
   window.location.replace("./index.html")
