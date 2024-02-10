@@ -14,14 +14,14 @@ function getInterest(location) {
     .then(function(respon) {
         return respon.json();
     })
-    .then(function(respon) {
-        if (respon.page.totalElements == 0) {
+    .then(function(data) {
+        if (data.page.totalElements == 0) {
 // create modal for no events
             alert("No Events found.");
         }
         else {
-            window.location.replace("./scroll.html");
-
+            addLocalStorage(data);
+            window.location.assign("./scroll.html");
         }
     })
     .catch(function(err) {
@@ -29,10 +29,10 @@ function getInterest(location) {
     });
 }
 
-// Add city search information to local storage
-function addLocalStorage(search) {
-    data = search.name + ";" + search.lat + ";" + search.lon;
-    localStorage.setItem("PreviousLocation", data);
+// Add city search information to local Session Storage
+function addLocalStorage(data) {
+    Eventsvalue = JSON.stringify(data._embedded.events);
+    sessionStorage.setItem("Events", Eventsvalue);
 }
 
 
@@ -56,7 +56,6 @@ function getLocationGeo() {
                 alert('No Location not found City you entered!');
             }
             else {
-                addLocalStorage(data[0]);
                 getInterest(data[0]);
             }
         })
