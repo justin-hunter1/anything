@@ -1,3 +1,20 @@
+#home:hover,
+#scroll:hover {
+  color: rgb(0, 209, 179);
+}
+
+#user-selection {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#category-choice,
+#user-categories,
+#user-chosen {
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
 #result-content a{
   background-color: rgb(0, 209, 179);
   padding: 10px;
