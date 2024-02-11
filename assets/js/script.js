@@ -2,14 +2,19 @@
 var TMapiBaseUrl = "https://app.ticketmaster.com/discovery/v2/";
 var TMapiKey = "apikey=1NDtAAlaAaurhUi3CEDkXhVsZBc8vfgV";
 var SubmitBtn = document.querySelector("#submit");
-var errorModal = document.querySelector("#error-modal")
-var modalText = document.querySelector("#error-modal-text")
+var errorModal = document.querySelector("#error-modal");
+var modalText = document.querySelector("#error-modal-text");
+var city = document.querySelector("#city");
+var radius = document.querySelector("#radius");
+var interest = document.querySelector("#user-categories");
+
+function userSelectStorage() {
+    var userSelection = [city.value.charAt(0).toUpperCase() + city.value.slice(1).trim(), radius.value, interest.textContent];
+    sessionStorage.setItem("userSelection", JSON.stringify(userSelection));
+}
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
-    var radius = document.querySelector("#radius");
-    var interest = document.querySelector("#user-categories");
-
     var api = TMapiBaseUrl + "events.json?keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&" + TMapiKey;
     
     fetch(api)
@@ -18,11 +23,12 @@ function getInterest(location) {
     })
     .then(function(data) {
         if (data.page.totalElements == 0) {
-            modalText.textContent = "Your selection has unfortunately produced no results"
+            modalText.textContent = "Your selection has unfortunately produced no results. :("
             errorModal.classList.add("is-active")
         }
         else {
             addLocalStorage(data);
+            userSelectStorage();
             window.location.assign("./scroll.html");
         }
     })
@@ -42,7 +48,6 @@ function addLocalStorage(data) {
 // Get GeoLocation for City from user supplied input
 // uses openweathermap GEO API to get Lat and Lon of Location
 function getLocationGeo() {
-    var city = document.querySelector("#city");
     var url1 = "https://api.openweathermap.org/geo/1.0/direct?q="; 
     var url2 = "&limit=5&appid=cedfc15c5d9805b46699f39b13fc40c7";
 
@@ -55,7 +60,7 @@ function getLocationGeo() {
         })
         .then(function (data) {
             if (!data[0]) {
-                modalText.textContent = "Unable to find the City you are selecting"
+                modalText.textContent = "Unable to find the City you are selecting. :("
                 errorModal.classList.add("is-active")
             }
             else {

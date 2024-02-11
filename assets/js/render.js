@@ -2,10 +2,15 @@
 var ResultsElm = document.querySelector("#result-content");
 var eventData = sessionStorage.getItem("Events");
 var data = JSON.parse(eventData);
+var chosenThree = document.querySelector("#user-selection");
+var storedInfo = sessionStorage.getItem("userSelection");
+var keyInfo = JSON.parse(storedInfo)
+
 
 function renderResults() {
   console.log(data)
 
+  chosenThree.textContent = "Search results for " + keyInfo[2] + " within " + keyInfo[1] + " miles of " + keyInfo[0]
   data.forEach(function(object) {
     var resultName = document.createElement("a")
     var resultDate = document.createElement("p")
