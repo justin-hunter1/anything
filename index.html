@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anything Events Calendar</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anything Events Calendar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
     <nav class="navbar" role="navigation" aria-label="main-navigation">
       <div class="navbar-menu">
         <a id="home" class="navbar-item cat-1">Homepage</a>
@@ -17,17 +15,17 @@
       </div>
     </nav>
     <section class="hero is-small is-primary">
-        <div class="hero-body" id="header">
-            <p class="title">
-                Anything Events Calendar
-            </p>
-            <p class="subtitle">
-                What are <i>you</i> going to do tonight?
-            </p>
-        </div>
+      <div class="hero-body" id="header">
+        <p class="title">
+        Anything Events Calendar
+        </p>
+        <p class="subtitle">
+        What are <i>you</i> going to do tonight?
+        </p>
+      </div>
     </section>
     <div class="container is-widescreen is-flex pt-3">
-        <div class="container is-flex-direction-column">
+      <div class="container is-flex-direction-column">
         <div class="section px-auto has-text-justified">Please set your location and choose a lists of interests below. We will produce events in your area based on what is chosen, or online if you are interested in that.</div>
           <div class="section px-auto">
             <div class="field">
@@ -37,7 +35,6 @@
                 <input id="city" class="input" type="text" placeholder="e.g Denver, CO">
               </div>
             </div>
-            
             <div class="field">
               <label class="label ml-5">Radius</label>
               <div class="control is-expanded ml-6">
@@ -55,45 +52,61 @@
             </div>
           </div>
           <div class="section px-auto pt-0">
-            <h2 class="subtitle js-modal-trigger button is-primary pb-3" id="category-choice" data-target="genre-modal">Pick Genre(s)</h2>
+            <h2 class="subtitle js-modal-trigger button is-primary pb-3" id="category-choice" data-target="genre-modal">Pick a Genre</h2>
             <p id="user-categories" class="has-background-light-primary has-text-primary"></p>
-                  <div id="genre-modal" class="modal">
-                    <div id="out" class="modal-background"></div>
-                    <div class="modal-card">
-                      <header class="modal-card-head">
-                        <p class="modal-card-title">Genres</p>
-                        <button id="exit" class="delete" aria-label="close"></button>
-                      </header>
-                      <section class="modal-card-body">
-                        <button id="arts" class="button m-1 is-primary">All Arts & Theatre</button>
-                        <button id="broadway" class="button m-1 is-primary">Broadway</button>
-                        <button id="childrens" class="button m-1 is-primary">Children's Theatre</button>
-                        <button id="circus" class="button m-1 is-primary">Circus & Specialty Acts</button>
-                        <button id="classical" class="button m-1 is-primary">Classical</button>
-                        <button id="comedy" class="button m-1 is-primary">Comedy</button>
-                        <button id="cultural" class="button m-1 is-primary">Cultural</button>
-                        <button id="dance" class="button m-1 is-primary">Dance</button>
-                        <button id="espectaculo" class="button m-1 is-primary">Espectaculo</button>
-                        <button id="fashion" class="button m-1 is-primary">Fashion</button>
-                        <button id="fine" class="button m-1 is-primary">Fine Art</button>
-                        <button id="magic" class="button m-1 is-primary">Magic & Illusion</button>
-                        <button id="miscellaneous" class="button m-1 is-primary">Miscellaneous</button>
-                        <button id="multimedia" class="button m-1 is-primary">Multimedia</button>
-                        <button id="music" class="button m-1 is-primary">Music</button>
-                        <button id="opera" class="button m-1 is-primary">Opera</button>
-                        <button id="performance" class="button m-1 is-primary">Performance Art</button>
-                        <button id="puppetry" class="button m-1 is-primary">Puppetry</button>
-                        <button id="spectacular" class="button m-1 is-primary">Spectacular</button>
-                        <button id="theatre" class="button m-1 is-primary">Theatre</button>
-                        <button id="variety" class="button m-1 is-primary">Variety</button>
-                        <p class="has-background-light-primary has-text-primary" id="user-chosen"></p>
-                      </section>
-                      <footer class="modal-card-foot">
-                        <button id="save" class="button is-primary">Save changes</button>
-                        <button id="cancel" class="button">Cancel</button>
-                      </footer>
-                    </div>
-                  </div>
+            <div id="genre-modal" class="modal">
+              <div id= "out" class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">Genres</p>
+                    <button id="exit" class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <button id="arts" class="button m-1 is-primary">All Arts & Theatre</button>
+                    <button id="broadway" class="button m-1 is-primary">Broadway</button>
+                    <button id="childrens" class="button m-1 is-primary">Children's Theatre</button>
+                    <button id="circus" class="button m-1 is-primary">Circus & Specialty Acts</button>
+                    <button id="classical" class="button m-1 is-primary">Classical</button>
+                    <button id="comedy" class="button m-1 is-primary">Comedy</button>
+                    <button id="cultural" class="button m-1 is-primary">Cultural</button>
+                    <button id="dance" class="button m-1 is-primary">Dance</button>
+                    <button id="espectaculo" class="button m-1 is-primary">Espectaculo</button>
+                    <button id="fashion" class="button m-1 is-primary">Fashion</button>
+                    <button id="fine" class="button m-1 is-primary">Fine Art</button>
+                    <button id="magic" class="button m-1 is-primary">Magic & Illusion</button>
+                    <button id="miscellaneous" class="button m-1 is-primary">Miscellaneous</button>
+                    <button id="multimedia" class="button m-1 is-primary">Multimedia</button>
+                    <button id="music" class="button m-1 is-primary">Music</button>
+                    <button id="opera" class="button m-1 is-primary">Opera</button>
+                    <button id="performance" class="button m-1 is-primary">Performance Art</button>
+                    <button id="puppetry" class="button m-1 is-primary">Puppetry</button>
+                    <button id="spectacular" class="button m-1 is-primary">Spectacular</button>
+                    <button id="theatre" class="button m-1 is-primary">Theatre</button>
+                    <button id="variety" class="button m-1 is-primary">Variety</button>
+                    <p class="has-background-light-primary has-text-primary" id="user-chosen"></p>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button id="save" class="button is-primary">Save changes</button>
+                  </footer>
+                </div>
+              </div>
+            </div>
+            <div id="error-modal" class="modal">
+              <div id="outy" class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">Little Snag</p>
+                    <button id="xit" class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <p id="error-modal-text" class="has-background-light-primary has-text-primary"></p>
+                  </section>
+                  <footer class="modal-card-foot">
+                    <button id="okay" class="button is-primary">Okay</button>
+                  </footer>
+                </div>        
+              </div>
+            </div>
           </div>
           <div class="field is-grouped is-grouped-centered pt-0 pb-4">
             <div class="control">
@@ -101,15 +114,16 @@
             </div>
           </div>
         </div>
-    </div>
-    <footer class="footer">
+      </div>
+      <footer class="footer">
       <div class="content has-text-centered">
-      <a  class="has-text-right" href="#header">
-        <p class="is-uppercase is-size-7">Back to top</p>
-      </a>
-      <section>© M,M,J, & Z, Inc.</section>
+        <a class="has-text-right" href="#header">
+          <p class="is-uppercase is-size-7">Back to top</p>
+        </a>
+        <section>© M,M,J, & Z, Inc.</section>
+      </div>
+      </footer>
     </div>
-    </footer>
     <script src="./assets/js/scroll.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
