@@ -18,7 +18,7 @@ function getInterest(location) {
     })
     .then(function(data) {
         if (data.page.totalElements == 0) {
-            modalText.textContent = "Your selection has unfortunately produce no results"
+            modalText.textContent = "Your selection has unfortunately produced no results"
             errorModal.classList.add("is-active")
         }
         else {
@@ -34,6 +34,7 @@ function getInterest(location) {
 // Add city search information to local Session Storage
 function addLocalStorage(data) {
     Eventsvalue = JSON.stringify(data._embedded.events);
+    // JSON.stringify(data.dates)
     sessionStorage.setItem("Events", Eventsvalue);
 }
 
@@ -63,6 +64,4 @@ function getLocationGeo() {
         })
 }
 
-if (window.location.href.includes("index.html")) {
-    SubmitBtn.addEventListener("click", getLocationGeo);
-}
+SubmitBtn.addEventListener("click", getLocationGeo);
