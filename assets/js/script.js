@@ -2,6 +2,8 @@
 var TMapiBaseUrl = "https://app.ticketmaster.com/discovery/v2/";
 var TMapiKey = "apikey=1NDtAAlaAaurhUi3CEDkXhVsZBc8vfgV";
 var SubmitBtn = document.querySelector("#submit");
+var errorModal = document.querySelector("#error-modal")
+var modalText = document.querySelector("#error-modal-text")
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
@@ -16,8 +18,8 @@ function getInterest(location) {
     })
     .then(function(data) {
         if (data.page.totalElements == 0) {
-// create modal for no events
-            alert("No Events found.");
+            modalText.textContent = "Your selection has unfortunately produce no results"
+            errorModal.classList.add("is-active")
         }
         else {
             addLocalStorage(data);
@@ -52,8 +54,8 @@ function getLocationGeo() {
         })
         .then(function (data) {
             if (!data[0]) {
-// create modal for no city                
-                alert('No Location not found City you entered!');
+                modalText.textContent = "Unable to find the City you are selecting"
+                errorModal.classList.add("is-active")
             }
             else {
                 getInterest(data[0]);

@@ -26,9 +26,12 @@ var theModal = document.querySelector("#genre-modal")
 var outModal = document.querySelector("#out")
 var exitModal = document.querySelector("#exit")
 var saveModal = document.querySelector("#save")
-var cancelModal = document.querySelector("#cancel")
+var outyModal = document.querySelector("#outy")
+var xitModal = document.querySelector("#xit")
+var okayModal = document.querySelector("#okay")
 var homepageButton = document.querySelector("#home")
 var scrollButton = document.querySelector("#scroll")
+var errorModal = document.querySelector("#error-modal")
 
 scrollButton.addEventListener("click", function() {
   window.location.replace("./scroll.html")
@@ -43,10 +46,14 @@ categoryChoice.addEventListener("click", function() {
 })
 
 outModal.addEventListener("click", function() {
+  userCategories.textContent = ""
+  userChosen.textContent = ""
   theModal.classList.remove("is-active")
 })
 
 exitModal.addEventListener("click", function() {
+  userCategories.textContent = ""
+  userChosen.textContent = ""
   theModal.classList.remove("is-active")
 })
 
@@ -54,8 +61,16 @@ saveModal.addEventListener("click", function() {
   theModal.classList.remove("is-active")
 })
 
-cancelModal.addEventListener("click", function() {
-  theModal.classList.remove("is-active")
+outyModal.addEventListener("click", function() {
+  errorModal.classList.remove("is-active")
+})
+
+xitModal.addEventListener("click", function() {
+  errorModal.classList.remove("is-active")
+})
+
+okayModal.addEventListener("click", function() {
+  errorModal.classList.remove("is-active")
 })
 
 artsValue.addEventListener("click", function() {
