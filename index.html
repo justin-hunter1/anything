@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
   </head>
   <body>
+    <!-- adding a nav bar to access each page if needed -->
     <nav class="navbar" role="navigation" aria-label="main-navigation">
       <div class="navbar-brand">
         <a id="home" class="navbar-item cat-1">Homepage</a>
@@ -28,6 +29,7 @@
       <div class="container is-flex-direction-column">
         <div class="section px-auto has-text-justified">Please set your location and choose an interest below. We will produce events in your area based on what is chosen.</div>
           <div class="section px-auto">
+            <!-- user city input -->
             <div class="field">
               <h2 class="subtitle">Location</h2>
               <label class="label ml-5">City</label>
@@ -35,6 +37,7 @@
                 <input id="city" class="input" type="text" placeholder="e.g Denver, CO">
               </div>
             </div>
+            <!-- user radius input -->
             <div class="field">
               <label class="label ml-5">Radius</label>
               <div class="control is-expanded ml-6">
@@ -51,9 +54,11 @@
               </div>
             </div>
           </div>
+          <!-- user genre input -->
           <div class="section px-auto pt-0">
             <h2 class="subtitle js-modal-trigger button is-primary pb-3" id="category-choice" data-target="genre-modal">Pick a Genre</h2>
             <p id="user-categories" class="has-background-light-primary has-text-primary"></p>
+            <!-- Here is the modal for picking a genre option -->
             <div id="genre-modal" class="modal">
               <div id= "out" class="modal-background"></div>
                 <div class="modal-card">
@@ -91,6 +96,7 @@
                 </div>
               </div>
             </div>
+            <!-- This modal is for an "error" message -->
             <div id="error-modal" class="modal">
               <div id="outy" class="modal-background"></div>
                 <div class="modal-card">

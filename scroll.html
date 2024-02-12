@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- adding a nav bar to access each page if needed -->
     <nav class="navbar" role="navigation" aria-label="main-navigation">
       <div class="navbar-brand">
         <a id="home" class="navbar-item cat-1">Homepage</a>
@@ -18,12 +19,14 @@
     <div class="columns mx-auto my-auto">
       <div class="column is-one-third">
         <div class="section px-auto">
+          <!-- user city input -->
           <div class="field">
             <label class="label">City</label>
             <div class="control ml-1">
               <input id="city" class="input" type="text" placeholder="e.g Denver, CO">
             </div>
           </div>
+          <!-- user radius input -->
           <div class="field">
             <label class="label">Radius</label>
             <div class="control is-expanded ml-1">
@@ -40,21 +43,25 @@
             </div>
           </div>
         </div>
+        <!-- user genre input -->
         <div class="buttons is-centered">
           <h2 id="category-choice" class="subtitle js-modal-trigger button is-primary" data-target="genre-modal">Change Genre</h2>
-          <p class="has-background-light-primary has-text-primary level-item" id="user-categories"></p>
         </div>
+        <p class="has-background-light-primary has-text-primary level-item" id="user-categories"></p>
         <div class="field is-grouped is-grouped-centered pt-0 pb-4">
+          <!-- submit to activate the fetch -->
           <div class="control mt-4">
             <button id="submit" class="button is-medium is-primary">Submit</button>
           </div>
         </div>
       </div>
+      <!-- here is where the results appear as well as the users parameters -->
       <div class="column">
         <h2 class="label is-medium" id="user-selection"></h2>
         <p id="result-content"></p>
       </div>
     </div>
+    <!-- Here is the modal for picking a genre option -->
     <div id="genre-modal" class="modal">
       <div id="out" class="modal-background"></div>
         <div class="modal-card">
@@ -92,6 +99,7 @@
         </div>
       </div>
     </div>
+    <!-- This modal is for an "error" message -->
     <div id="error-modal" class="modal">
       <div id="outy" class="modal-background"></div>
         <div class="modal-card">
@@ -108,6 +116,7 @@
         </div>        
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js" integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous" ></script>
     <script src="./assets/js/scroll.js"></script>
     <script src="./assets/js/render.js"></script>
     <script src="./assets/js/script.js"></script>
