@@ -8,20 +8,22 @@ var city = document.querySelector("#city");
 var radius = document.querySelector("#radius");
 var interest = document.querySelector("#user-categories");
 
+// Adding users input to storqge to present on scroll.html
 function userSelectStorage() {
-    var userSelection = [city.value.charAt(0).toUpperCase() + city.value.slice(1).trim(), radius.value, interest.textContent];
+    // This is to set it as an array for easier use, as well make sure the user type city is in proper case
+    var userSelection = [city.value.charAt(0).toUpperCase() + city.value.slice(1).toLowerCase(), radius.value, interest.textContent];
     sessionStorage.setItem("userSelection", JSON.stringify(userSelection));
 }
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
     var api = TMapiBaseUrl + "events.json?keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&" + TMapiKey;
-    
     fetch(api)
     .then(function(respon) {
         return respon.json();
     })
     .then(function(data) {
+        // activate "error" modal to signify that there is no results
         if (data.page.totalElements == 0) {
             modalText.textContent = "Your selection has unfortunately produced no results. :("
             errorModal.classList.add("is-active")
@@ -59,6 +61,7 @@ function getLocationGeo() {
             return respon.json();
         })
         .then(function (data) {
+            // activates "error" modal to signify issues wwith users city input
             if (!data[0]) {
                 modalText.textContent = "Unable to find the City you are selecting. :("
                 errorModal.classList.add("is-active")

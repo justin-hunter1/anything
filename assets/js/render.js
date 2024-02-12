@@ -9,24 +9,29 @@ var keyInfo = JSON.parse(storedInfo)
 
 function renderResults() {
   console.log(data)
-
+  // To let user know what the last input received was.
   chosenThree.textContent = "Search results for " + keyInfo[2] + " within " + keyInfo[1] + " miles of " + keyInfo[0]
+  // Creating elements for each event fetched with an image, link and date & time.
   data.forEach(function(object) {
-    var resultName = document.createElement("a")
-    var resultDate = document.createElement("p")
-    resultName.textContent = object.name
-    resultName.href = object.url
-    resultDate.textContent = ""
-    ResultsElm.appendChild(resultName)
-    ResultsElm.appendChild(resultDate)
+    if (object.dates.status.code !== "cancelled" && object.dates.status.code !== "offsale") {
+      var resultImg = document.createElement("img")
+      var resultDate = document.createElement("p")
+      var resultName = document.createElement("a")
+      resultImg.src = object.images[0].url
+      resultName.textContent = object.name
+      resultDate.textContent = dayjs(object.dates.start.dateTime).format("ddd, MMM D, YYYY [at] hh:mm a")
+      resultName.href = object.url
+      ResultsElm.appendChild(resultImg)
+      ResultsElm.appendChild(resultDate)
+      ResultsElm.appendChild(resultName)
+      }
   });
 }
 
+// To help prevent error, this gets events from session storage only if applicable
 if (sessionStorage.getItem("Events")) {
   renderResults();
 }
 
-// following additional preferences in order
-// possibly access dates.start for date and time
-// possibly access dates.status to ignore canceled events
-// possibly access images[0] for main image
+
+// Look at possibly getting the API return in order based on date, closest to furthest out
