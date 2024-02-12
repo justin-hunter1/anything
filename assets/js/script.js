@@ -17,7 +17,7 @@ function userSelectStorage() {
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
-    var api = TMapiBaseUrl + "events.json?keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&" + TMapiKey;
+    var api = TMapiBaseUrl + "events.json?size=50&keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&" + TMapiKey;
     fetch(api)
     .then(function(respon) {
         return respon.json();

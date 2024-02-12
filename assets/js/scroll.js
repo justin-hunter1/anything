@@ -1,3 +1,4 @@
+// querySelectors for all modal categories
 var artsValue = document.querySelector("#arts")
 var broadwayValue = document.querySelector("#broadway")
 var childrensValue = document.querySelector("#childrens")
@@ -33,6 +34,9 @@ var homepageButton = document.querySelector("#home")
 var scrollButton = document.querySelector("#scroll")
 var errorModal = document.querySelector("#error-modal")
 
+// the following are all event listeners for...
+
+// navbar
 scrollButton.addEventListener("click", function() {
   window.location.replace("./scroll.html")
 })
@@ -41,6 +45,7 @@ homepageButton.addEventListener("click", function() {
   window.location.replace("./index.html")
 })
 
+// activating/deactivating the modals
 categoryChoice.addEventListener("click", function() {
   theModal.classList.add("is-active")
 })
@@ -73,6 +78,7 @@ okayModal.addEventListener("click", function() {
   errorModal.classList.remove("is-active")
 })
 
+// category selection
 artsValue.addEventListener("click", function() {
   userCategories.textContent = "All Arts & Theatre"
   userChosen.textContent = "All Arts & Theatre"
