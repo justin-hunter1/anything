@@ -32,6 +32,3 @@ function renderResults() {
 if (sessionStorage.getItem("Events")) {
   renderResults();
 }
-
-
-// Look at possibly getting the API return in order based on date, closest to furthest out
