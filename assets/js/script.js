@@ -8,7 +8,7 @@ var city = document.querySelector("#city");
 var radius = document.querySelector("#radius");
 var interest = document.querySelector("#user-categories");
 
-// Adding users input to storqge to present on scroll.html
+// Adding users input to storage to present on scroll.html
 function userSelectStorage() {
     // This is to set it as an array for easier use, as well make sure the user type city is in proper case
     var userSelection = [city.value.charAt(0).toUpperCase() + city.value.slice(1).toLowerCase(), radius.value, interest.textContent];
@@ -17,7 +17,7 @@ function userSelectStorage() {
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
-    var api = TMapiBaseUrl + "events.json?size=50&keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&" + TMapiKey;
+    var api = TMapiBaseUrl + "events.json?size=50&keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&sort=date,asc&" + TMapiKey;
     fetch(api)
     .then(function(respon) {
         return respon.json();
