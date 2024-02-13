@@ -7,6 +7,7 @@ var modalText = document.querySelector("#error-modal-text");
 var city = document.querySelector("#city");
 var radius = document.querySelector("#radius");
 var interest = document.querySelector("#user-categories");
+var randomizer = ['arts', 'broadway', 'childrens', 'circus', 'classical', 'comedy', 'cultural', 'dance', 'espectaculo', 'fashion', 'fine', 'magic', 'miscellaneous', 'multimedia', 'music', 'opera', 'performance', 'puppetry', 'spectacular', 'theatre', 'variety'];
 
 // Adding users input to storage to present on scroll.html
 function userSelectStorage() {
@@ -17,7 +18,12 @@ function userSelectStorage() {
 
 // Search for event using TicketMaster Event search API
 function getInterest(location) {
+    if (interest.textContent == "Random") {
+        interest.textContent = randomizer[getRandomInt(0, randomizer.length)];
+    }
+console.log(interest.textContent);
     var api = TMapiBaseUrl + "events.json?size=50&keyword=" + interest.textContent + "&geoPoint=" + location.lat + "," + location.lon + "&radius=" + radius.value + "&sort=date,asc&" + TMapiKey;
+
     fetch(api)
     .then(function(respon) {
         return respon.json();
@@ -44,6 +50,14 @@ function addLocalStorage(data) {
     Eventsvalue = JSON.stringify(data._embedded.events);
     // JSON.stringify(data.dates)
     sessionStorage.setItem("Events", Eventsvalue);
+}
+
+// generator for random number between 0 and Randomizer array length
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+
+    return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 
