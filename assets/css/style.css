@@ -41,5 +41,7 @@
 #result-content img {
   margin-bottom: 10px;
   height: 80px;
-  width: fit-content;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
 }
