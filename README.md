@@ -1,7 +1,9 @@
 # Anything Events
 
 ## Description
-This program is to show art themed events based on your location and preferences. The main feature is around a random button to choose a spontaneous event category. https://justin-hunter1.github.io/anything/
+This program is to show art themed events based on your location and preferences. The main feature is around a random button to choose a spontaneous event category. 
+
+[Link](https://justin-hunter1.github.io/anything/)
 
 ## Visuals
 ![alt text](<assets/images/Screenshot 2024-02-12 at 9.37.53 PM.png>)
