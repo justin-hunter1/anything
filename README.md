@@ -12,10 +12,10 @@ This program is to show art themed events based on your location and preferences
 This is used for finding an art themed event around your area! Fill out your location and category you prefer, or try a random one! then a list of options will appear for you! Have fun!
 
 ## Roadmap
--Add a calendar aspect. Make it easy to integrate your selected options into a calendar.
--Keep users on our page. Instead of having the events link to another site, we want to add a modal to display information about the event on our site.
--Include pagination.
--Have a watch-list to keep in storage for possible future options.
+- Add a calendar aspect. Make it easy to integrate your selected options into a calendar.  
+- Keep users on our page. Instead of having the events link to another site, we want to add a modal to display information about the event on our site.  
+- Include pagination.  
+- Have a watch-list to keep in storage for possible future options.  
 
 
 ## Authors and acknowledgment
